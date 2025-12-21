@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2025-12-21T19:39:01.518308+00:00",
+  "rows": {
+    "orders": 5,
+    "users": 4
+  },
+  "outputs": {
+    "orders": "/Users/khaledalamro/Desktop/SDAIA_bootcamp/bootcamp_week2/week2-data-work/data/processed/orders.parquet",
+    "users": "/Users/khaledalamro/Desktop/SDAIA_bootcamp/bootcamp_week2/week2-data-work/data/processed/users.parquet"
+  }
+}
