@@ -4,8 +4,7 @@ import json
 from datetime import datetime, timezone
 import logging
 
-# Make `src/` importable when running as a script
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[1] #this code make sure the moudle not foudn error is not happen
 SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
@@ -22,6 +21,9 @@ def main() -> None:
     orders = enforce_schema(read_orders_csv(p.raw / "orders.csv"))
     users = read_users_csv(p.raw / "users.csv")
 
+    #print(f"loaded rows in orders is {len(orders)}")
+    #print(f"loaded rows in users is {len(users)}")
+
     log.info("Loaded rows: orders=%s users=%s", len(orders), len(users))
     log.info("Orders dtypes:\n%s", orders.dtypes)
 
@@ -30,7 +32,8 @@ def main() -> None:
     write_parquet(orders, out_orders)
     write_parquet(users, out_users)
 
-    meta = {  # Optional but useful: minimal run metadata for reproducibility
+    # this is the metadata where the details of the data
+    meta = {  
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
         "rows": {"orders": int(len(orders)), "users": int(len(users))},
         "outputs": {"orders": str(out_orders), "users": str(out_users)},
