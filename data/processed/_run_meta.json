@@ -1,11 +1,14 @@
 {
-  "timestamp_utc": "2025-12-22T13:48:08.897747+00:00",
-  "rows": {
-    "orders": 5,
-    "users": 4
-  },
-  "outputs": {
-    "orders": "/Users/khaledalamro/Desktop/SDAIA_bootcamp/bootcamp_week2/week2-data-work/data/processed/orders.parquet",
-    "users": "/Users/khaledalamro/Desktop/SDAIA_bootcamp/bootcamp_week2/week2-data-work/data/processed/users.parquet"
+  "rows_out": 5,
+  "missing_created_at": 1,
+  "country_match_rate": 1.0,
+  "config": {
+    "root": "/Users/khaledalamro/Desktop/SDAIA_bootcamp/bootcamp_week2/week2-data-work",
+    "raw_orders": "/Users/khaledalamro/Desktop/SDAIA_bootcamp/bootcamp_week2/week2-data-work/data/raw/orders.csv",
+    "raw_users": "/Users/khaledalamro/Desktop/SDAIA_bootcamp/bootcamp_week2/week2-data-work/data/raw/users.csv",
+    "out_orders_clean": "/Users/khaledalamro/Desktop/SDAIA_bootcamp/bootcamp_week2/week2-data-work/data/processed/orders_clean.parquet",
+    "out_users": "/Users/khaledalamro/Desktop/SDAIA_bootcamp/bootcamp_week2/week2-data-work/data/processed/users.parquet",
+    "out_analytics": "/Users/khaledalamro/Desktop/SDAIA_bootcamp/bootcamp_week2/week2-data-work/data/processed/analytics_table.parquet",
+    "run_meta": "/Users/khaledalamro/Desktop/SDAIA_bootcamp/bootcamp_week2/week2-data-work/data/processed/_run_meta.json"
   }
 }
