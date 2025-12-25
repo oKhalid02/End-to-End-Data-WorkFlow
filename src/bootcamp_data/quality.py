@@ -1,6 +1,5 @@
 import pandas as pd
 
-orders = pd.read_parquet("/Users/khaledalamro/Desktop/SDAIA_bootcamp/bootcamp_week2/week2-data-work/data/processed/orders.parquet")
 # this function check for the column that you give if its not in the df it will say its missing
 def require_columns(df, cols):
     missing = []
